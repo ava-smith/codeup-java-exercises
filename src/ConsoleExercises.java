@@ -8,8 +8,9 @@ public class ConsoleExercises {
 // question 2 =============
 //        System.out.println("Enter an integer: ");
 //        int userInteger = inputScanner.nextInt();
+//        System.out.println(userInteger);
 // question 3 =============
-//        System.out.println("Enter 3 words: ");
+//        System.out.println("Enter 3 words, seperated by spaces: ");
 //        String wordOne = inputScanner.next();
 //        String wordTwo = inputScanner.next();
 //        String wordThree = inputScanner.next();
@@ -25,7 +26,7 @@ public class ConsoleExercises {
         String userWidth = inputScanner.nextLine();
         int userLengthInt = Integer.parseInt(userLength);
         int userWidthInt = Integer.parseInt(userWidth);
-        int perimeter = (userLengthInt + userLengthInt + userWidthInt + userWidthInt);
+        int perimeter = (userLengthInt *2) + (userWidthInt * 2);
         int area = (userLengthInt * userWidthInt);
         System.out.printf("The perimeter of the classroom is: %d ft%n", perimeter);
         System.out.printf("The area of the classroom is: %d sq ft", area);
