@@ -3,9 +3,11 @@ import java.util.Scanner;
 public class Bob {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("Tell Bob something");
-        String userResponse = scanner.nextLine();
+        String userInput;
+        do {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Tell Bob something");
+            String userResponse = scanner.nextLine();
             if (userResponse.trim().endsWith("?")) {
                 System.out.println("Sure.");
             } else if (userResponse.trim().endsWith("!")) {
@@ -15,5 +17,8 @@ public class Bob {
             } else {
                 System.out.println("Whatever.");
             }
+            System.out.println("Do you want to continue [y/n]");
+            userInput = scanner.nextLine();
+        } while (userInput.equals("y"));
     }
 }
