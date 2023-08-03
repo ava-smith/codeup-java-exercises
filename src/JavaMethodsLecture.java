@@ -22,15 +22,15 @@ public class JavaMethodsLecture {
 
     // no input or returned output
 
-    public static void sayGreeting() {
-        System.out.println("Hello");
-    }
+//    public static void sayGreeting() {
+//        System.out.println("Hello");
+//    }
 
-    public static void main(String[] args) {
-        System.out.println(returnName());
-        System.out.println(returnLongerString("Hello", "Hi"));
-        System.out.println(canBeHalved(9));
-    }
+//    public static void main(String[] args) {
+//        System.out.println(returnName());
+//        System.out.println(returnLongerString("Hello", "Hi"));
+//        System.out.println(canBeHalved(9));
+//    }
     // no returned output with input
 
 //    public static void sayInput(String input) {
@@ -85,24 +85,24 @@ public class JavaMethodsLecture {
      */
 
     // TODO: Write a method, returnName, that returns the string of your name.
-    public static String returnName() {
-        return "Ava Smith";
-    }
+//    public static String returnName() {
+//        return "Ava Smith";
+//    }
     // TODO: Write a method, returnLongerString, that takes in two strings and returns the longer of the two strings.
-    public static String returnLongerString(String str1, String str2) {
-        int str1Length = str1.length();
-        int str2Length = str2.length();
-//        if (str1Length > str2Length) {
-//            return str1;
-//        } else {
-//            return str2;
-//        }
-        return (str1Length > str2Length) ? str1 : str2;
-    }
+//    public static String returnLongerString(String str1, String str2) {
+//        int str1Length = str1.length();
+//        int str2Length = str2.length();
+////        if (str1Length > str2Length) {
+////            return str1;
+////        } else {
+////            return str2;
+////        }
+//        return (str1Length > str2Length) ? str1 : str2;
+//    }
     // TODO: Write a method, canBeHalved, that takes in an integer and returns true if the input integer is evenly divisible by two.
-    public static boolean canBeHalved (int userInteger) {
-        return userInteger % 2 == 0;
-    }
+//    public static boolean canBeHalved (int userInteger) {
+//        return userInteger % 2 == 0;
+//    }
     // TODO: !! Complete math exercises from the curriculum !!
 
 
