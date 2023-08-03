@@ -150,7 +150,17 @@ public class JavaMethodsLecture {
 
     // TODO: create a method, sayName, that can take in a single name String input or two name String inputs and will return
     //  a greeting message to the user by either their first or first and last name.
+    public static String sayName(String name) {
+        return "Hello, " + name;
+    }
 
+    public static String sayName(String name1, String name2) {
+        return "Hello, " + name1 + " " + name2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sayName("Ava", "Smith"));
+    }
     // example: sayName("Justin") - "Hi Justin"
     // example: sayName("Justin", "Reich") - "Hi Justin Reich"
 
