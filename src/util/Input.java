@@ -3,45 +3,83 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+    // Instance Fields =========================
     private Scanner scanner;
 
+    // Constructors ============================
     public Input() {
-        scanner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
+    // Instance Methods ========================
     public String getString() {
-        return scanner.nextLine();
+        return this.scanner.nextLine();
+    }
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return this.getString();
     }
 
     public boolean yesNo() {
-        String userInput = scanner.nextLine();
-        return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
+        return this.getString().trim().toLowerCase().startsWith("y");
+    }
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        return this.yesNo();
     }
 
     public int getInt(int min, int max) {
-        int userInput;
-        do {
-            System.out.printf("Enter a number between %d and %d%n", min, max);
-            userInput = scanner.nextInt();
-        } while (userInput > max || userInput < min);
-        return userInput;
+        int userInt = this.getInt();
+        if (userInt >= min && userInt <= max) {
+            return userInt;
+        } else {
+            System.out.printf("The number must be between %d and %d. Please try again.%n", min, max);
+            return getInt(min, max);
+        }
+    }
+    public int getInt(String prompt, int min, int max) {
+        System.out.println(prompt);
+        return this.getInt(min, max);
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        try {
+            return Integer.parseInt(this.getString());
+        } catch (NumberFormatException e) {
+            System.out.println("You must enter a whole number.");
+            return this.getInt();
+        }
+    }
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        return this.getInt();
     }
 
     public double getDouble(double min, double max) {
-        double userInput;
-        do {
-            System.out.printf("Enter a number between %f and %f", min, max);
-            userInput = scanner.nextDouble();
-        } while (userInput > max && userInput < min);
-        return userInput;
+        double userDouble = this.getDouble();
+        if (userDouble >= min && userDouble <= max) {
+            return userDouble;
+        } else {
+            System.out.printf("The number must be between %f and %f. Please try again.%n", min, max);
+            return getDouble(min, max);
+        }
+    }
+    public double getDouble(String prompt, double min, double max) {
+        System.out.println(prompt);
+        return this.getDouble(min, max);
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        try {
+            return Double.parseDouble(this.getString());
+        } catch (NumberFormatException e) {
+            System.out.println("You must enter a number.");
+            return this.getDouble();
+        }
+    }
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        return this.getDouble();
     }
 
 }
