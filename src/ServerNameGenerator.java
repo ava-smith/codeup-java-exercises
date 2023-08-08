@@ -4,7 +4,7 @@ public class ServerNameGenerator {
 
     public static String getRandomNoun() {
         String[] nouns = {
-                "Pencil", "Book", "Moon", "Star", "Chips", "Plate", "Door", "Dog", "Cat", "Tree"
+                "Lion", "Flower", "Moon", "Star", "Leaf", "Snake", "Cow", "Dog", "Cat", "Tree"
         };
 
         Random random = new Random();
@@ -15,7 +15,7 @@ public class ServerNameGenerator {
 
     public static String getRandomAdjective() {
         String[] adjectives = {
-                "Pretty", "Hot", "Cold", "Great", "Tired", "Lazy", "Silly", "Funny", "Bold", "Amazing"
+                "Pretty", "Dumb", "Cold", "Great", "Tired", "Lazy", "Silly", "Funny", "Bold", "Cool"
         };
         Random random = new Random();
 
