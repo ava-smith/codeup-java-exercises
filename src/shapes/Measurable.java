@@ -2,7 +2,7 @@ package shapes;
 
 public interface Measurable {
 
-    int getPerimeter();
-    int getArea();
+    double getPerimeter();
+    double getArea();
 
 }
