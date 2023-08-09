@@ -9,5 +9,6 @@ public class StudentTest {
         student1.addGrade(100);
 
         System.out.println(student1.getGradeAverage());
+
     }
 }

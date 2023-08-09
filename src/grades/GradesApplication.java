@@ -5,7 +5,7 @@ import util.Input;
 import java.util.HashMap;
 
 public class GradesApplication {
-    public static void main(String[] args) {
+    private static void execute() {
         HashMap<String, Student> students = new HashMap<>();
 
         students.put("sammy-sam", new Student("sam"));
@@ -52,10 +52,13 @@ public class GradesApplication {
                     System.out.println("No student found. Please enter a valid username");
                 } else {
                     System.out.printf("Student Name: %s%n", student.getName());
-                    System.out.printf("Grades %s%n", student.grades);
-                    System.out.printf("Grade Average %f%n", student.getGradeAverage());
+                    System.out.printf("Grades %s%n", student.getGrades());
+                    System.out.printf("Grade Average %.2f%n", student.getGradeAverage());
                 }
             }
         }
+    }
+    public static void main(String[] args) {
+        execute();
     }
 }
