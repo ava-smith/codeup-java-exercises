@@ -2,7 +2,7 @@ package util;
 
 public class InputTest {
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
         Input userInput = new Input();
 //        System.out.println("Please enter a string");
 //        System.out.println(userInput.getString());
@@ -28,5 +28,5 @@ public class InputTest {
 //        System.out.println(userInput.getInt("Please enter a number"));
 //        System.out.println(userInput.getDouble("Enter a number between 1.0 and 10.0", 1.0, 10.0));
 //        System.out.println(userInput.getDouble("Please enter a number"));
-    }
+//    }
 }

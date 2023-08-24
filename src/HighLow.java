@@ -1,11 +1,12 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class HighLow {
 
     public static void main(String[] args) {
         guessTheNumber();
     }
+
 
     public static void guessTheNumber() {
         Scanner scan = new Scanner(System.in);
